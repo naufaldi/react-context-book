@@ -7,8 +7,8 @@ export default class BookList extends Component {
 
   render() {
     // deconstruction data
-    const { isLightTheme, light, dark } = this.context;
-    const theme = isLightTheme ? light : dark;
+    const { isLighTheme, light, dark } = this.context;
+    const theme = isLighTheme ? light : dark;
 
     return (
       <div

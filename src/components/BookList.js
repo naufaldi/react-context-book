@@ -2,9 +2,11 @@ import React, { Component } from "react";
 // Import theme context
 import { ThemeContext } from "../context/ThemeContext";
 export default class BookList extends Component {
+  // import context dahulu
   static contextType = ThemeContext;
 
   render() {
+    // deconstruction data
     const { isLightTheme, light, dark } = this.context;
     const theme = isLightTheme ? light : dark;
 

@@ -1,8 +1,9 @@
 import React, { Component, createContext } from "react";
-// Create context
+
 export const ThemeContext = createContext();
 
 class ThemeContextProvider extends Component {
+  // state theme
   state = {
     isLightTheme: true,
     light: { syntax: "#555", ui: "#ddd", bg: "#eee" },
@@ -10,12 +11,9 @@ class ThemeContextProvider extends Component {
   };
   render() {
     return (
-      <div>
-        {/* inject value to provider   */}
-        <ThemeContextProvider value={{ ...this.state }}>
-          {this.props.children}
-        </ThemeContextProvider>
-      </div>
+      <ThemeContext.Provider value={{ ...this.state }}>
+        {this.props.children}
+      </ThemeContext.Provider>
     );
   }
 }
